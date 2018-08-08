@@ -1,0 +1,14 @@
+task exercise4 {}
+
+println "Starting exercise4 task..."
+
+def foo = "One million dollars"
+def myClosure = {
+	println "from closure"
+	println "the value of foo is: $foo"
+}
+
+def bar = myClosure
+def baz = bar
+
+bar()

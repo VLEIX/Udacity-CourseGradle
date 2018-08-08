@@ -1,0 +1,55 @@
+task exercise3 {}
+
+println "Starting exercise3 task..."
+
+
+class JavaGreeter {
+	public void sayHello() {
+		System.out.println("Hello Java!")
+	}
+}
+
+JavaGreeter javaGreeter = new JavaGreeter()
+javaGreeter.sayHello()
+
+
+def foo = 6.5
+println "foo has value: $foo"
+
+println "math operation. 5 + 6: ${5 + 6}"
+
+println "foo is type of ${foo.class} and has value: $foo"
+
+foo = "a string"
+
+println "foo is now type of ${foo.class} and has value: $foo"
+
+
+def doubleIt(n) {
+	n + n
+}
+
+def var1 = 5
+println "doubleIt($var1) = ${doubleIt(var1)}"
+
+var1 = "vari"
+println "doubleIt($var1) = ${doubleIt(var1)}"
+
+
+def noArgs() {
+	println "Called the no args function"
+}
+
+def oneArg(x) {
+	println "Called the 1 arg function with $x"
+	x
+}
+
+def twoArgs(x, y) {
+	println "Called the 2 args function with $x and $y"
+	x + y
+}
+
+noArgs()
+oneArg 500
+twoArgs oneArg (500), 300
