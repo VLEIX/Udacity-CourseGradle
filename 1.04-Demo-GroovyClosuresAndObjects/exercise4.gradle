@@ -2,6 +2,8 @@ task exercise4 {}
 
 println "Starting exercise4 task..."
 
+
+// Example 1
 def foo = "One million dollars"
 def myClosure = {
 	println "from closure"
@@ -12,3 +14,47 @@ def bar = myClosure
 def baz = bar
 
 bar()
+
+
+// Example 2
+def doubleIt = {
+	x -> x + x
+}
+
+def applyTwice(func, arg) {
+	func(func(arg))
+}
+
+def arg = 5
+def argDoubleTwice = applyTwice(doubleIt, arg)
+println "Applying doubleIt twice to $arg equals $argDoubleTwice"
+
+
+// Example 3
+def myList = ["Gradle", "Groovy", "Android"]
+
+def printItem = {item -> println "List item: $item"}
+
+myList.each(printItem)
+
+myList.each{println "Compactly printing each list item: $it"}
+
+
+// Example 4
+def class GroovyGreeter {
+	String greeting = "Default greeting"
+	def printGreeting(){println "Greeting: $greeting"}
+}
+
+def groovyGreeter = new GroovyGreeter()
+groovyGreeter.printGreeting()
+groovyGreeter.greeting = "Hey there folks"
+groovyGreeter.printGreeting()
+
+def greetingClosure = {
+	greeting = "Wasaaaaaa"
+	printGreeting()
+}
+
+greetingClosure.delegate = groovyGreeter
+greetingClosure()

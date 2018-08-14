@@ -3,6 +3,7 @@ task exercise3 {}
 println "Starting exercise3 task..."
 
 
+// Example 1
 class JavaGreeter {
 	public void sayHello() {
 		System.out.println("Hello Java!")
@@ -13,6 +14,7 @@ JavaGreeter javaGreeter = new JavaGreeter()
 javaGreeter.sayHello()
 
 
+// Example 2
 def foo = 6.5
 println "foo has value: $foo"
 
@@ -25,6 +27,7 @@ foo = "a string"
 println "foo is now type of ${foo.class} and has value: $foo"
 
 
+// Example 3
 def doubleIt(n) {
 	n + n
 }
